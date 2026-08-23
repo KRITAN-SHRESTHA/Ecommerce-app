@@ -1,18 +1,22 @@
-import 'package:ecommerceapp/features/auth/presentation/pages/onboarding_page.dart';
+import 'package:ecommerceapp/config/routes/routes.dart';
+import 'package:ecommerceapp/core/services/injector.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MainApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await injectDependencies();
+  runApp(MainApp(appRouter: getIt<AppRouter>()));
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  const MainApp({super.key, required this.appRouter});
+  final AppRouter appRouter;
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: OnboardingPage()),
+      routerConfig: appRouter.config(),
     );
   }
 }

@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:ecommerceapp/config/routes/routes.dart';
 import 'package:ecommerceapp/core/utils/assets.dart';
 import 'package:ecommerceapp/core/utils/color.dart';
 import 'package:ecommerceapp/core/utils/extension.dart';
@@ -5,6 +7,7 @@ import 'package:ecommerceapp/core/utils/string.dart';
 import 'package:ecommerceapp/core/utils/style.dart';
 import 'package:flutter/material.dart';
 
+@RoutePage()
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
 
@@ -39,7 +42,7 @@ class OnboardingPage extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(24, 22, 24, 31),
               child: ElevatedButton(
                 onPressed: () {
-                  // Navigate to the next page
+                  context.router.push(const SignupRoute());
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: kPrimaryColor,
@@ -52,7 +55,7 @@ class OnboardingPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Get Started',
+                      kOnboardingButtonText,
                       style: textBody1Medium.copyWith(color: kWhiteColor),
                     ).px(10),
 

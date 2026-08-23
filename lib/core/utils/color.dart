@@ -15,3 +15,6 @@ const Color kWhiteColor = Color(0xFFFFFFFF);
 // Status colors
 const Color kSuccessColor = Color(0xFF0C9409);
 const Color kErrorColor = Color(0xFFED1010);
+
+// Brand colors
+const Color kFacebookColor = Color(0xFF1877F2);
