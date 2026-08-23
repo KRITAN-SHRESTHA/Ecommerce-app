@@ -1,4 +1,4 @@
-import 'package:ecommerceapp/features/auth/presentation/pages/Splash_page.dart';
+import 'package:ecommerceapp/features/auth/presentation/pages/onboarding_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: SplashPage()),
+      home: Scaffold(body: OnboardingPage()),
     );
   }
 }
