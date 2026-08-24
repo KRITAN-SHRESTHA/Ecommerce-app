@@ -25,3 +25,14 @@ const String kTermsText = 'Terms';
 const String kCommaSeparator = ',';
 const String kPrivacyPolicyText = ' Privacy Policy,\n';
 const String kCommaAndText = 'and ';
+
+// Login page
+const String kLoginTitle = 'Login to your account';
+const String kLoginSubtitle = "It's great to see you again.";
+const String kForgotPasswordText = 'Forgot your password? ';
+const String kResetPasswordText = 'Reset your password';
+const String kLoginButtonText = 'Login';
+const String kLoginWithGoogleText = 'Login with Google';
+const String kLoginWithFacebookText = 'Login with Facebook';
+const String kDontHaveAccountText = "Don't have an account? ";
+const String kJoinText = 'Join';
