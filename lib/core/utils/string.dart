@@ -63,3 +63,11 @@ const String kSearchLabel = 'Search';
 const String kSavedLabel = 'Saved';
 const String kCartLabel = 'Cart';
 const String kAccountLabel = 'Account';
+
+// home page
+const String kDiscover = 'Discover';
+
+// search page
+const String kSearchForClothesHint = 'Search for clothes...';
+const String kRecentSearchesTitle = 'Recent Searches';
+const String kClearAllText = 'Clear all';
