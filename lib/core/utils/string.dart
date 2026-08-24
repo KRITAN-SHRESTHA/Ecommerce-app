@@ -20,6 +20,7 @@ const String kLogInText = 'Log In';
 const String kUsedCookieText = 'Cookie Use';
 const String kFullNameError = 'Please enter your full name';
 const String kPasswordError = 'Please enter your password';
+const String kPasswordMismatchError = 'Your password does not match.';
 const String kSignupTermsIntro = 'By signing up you agree to our ';
 const String kTermsText = 'Terms';
 const String kCommaSeparator = ',';
@@ -36,3 +37,22 @@ const String kLoginWithGoogleText = 'Login with Google';
 const String kLoginWithFacebookText = 'Login with Facebook';
 const String kDontHaveAccountText = "Don't have an account? ";
 const String kJoinText = 'Join';
+
+// Forgot password flow
+const String kForgotPasswordTitle = 'Forgot password';
+const String kForgotPasswordSubtitle =
+    'Enter your email for the verification process. We will send 4 digits code to your email.';
+const String kSendCodeButtonText = 'Send Code';
+const String kVerificationTitle = 'Enter 4 Digit Code';
+const String kVerificationSubtitlePrefix =
+    'Enter 4 digit code that your receive on your email (';
+const String kVerificationSubtitleSuffix = ').';
+const String kEmailNotReceivedText = 'Email not received? ';
+const String kResendCodeText = 'Resend code';
+const String kContinueButtonText = 'Continue';
+const String kResetPasswordTitle = 'Reset Password';
+const String kResetPasswordSubtitle =
+    'Set the new password for your account so you can login and access all the features.';
+const String kPasswordChangedTitle = 'Password Changed!';
+const String kPasswordChangedSubtitle =
+    'Your can now use your new password to login to your account.';

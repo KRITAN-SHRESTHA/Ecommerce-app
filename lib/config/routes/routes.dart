@@ -1,7 +1,11 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:ecommerceapp/features/auth/presentation/pages/forgot_password_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/onboarding_page.dart';
+import 'package:ecommerceapp/features/auth/presentation/pages/reset_password_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/signin_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/signup_page.dart';
+import 'package:ecommerceapp/features/auth/presentation/pages/verification_code_page.dart';
+import 'package:flutter/widgets.dart';
 
 part 'routes.gr.dart';
 
@@ -23,5 +27,8 @@ class AppRouter extends RootStackRouter {
     AutoRoute(initial: true, keepHistory: true, page: OnboardingRoute.page),
     AutoRoute(page: SignupRoute.page),
     AutoRoute(page: SigninRoute.page),
+    AutoRoute(page: ForgotPasswordRoute.page),
+    AutoRoute(page: VerificationCodeRoute.page),
+    AutoRoute(page: ResetPasswordRoute.page),
   ];
 }
