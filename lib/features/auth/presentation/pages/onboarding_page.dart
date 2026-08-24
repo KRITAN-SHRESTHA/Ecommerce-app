@@ -20,6 +20,12 @@ class OnboardingPage extends StatelessWidget {
             Expanded(
               child: Stack(
                 children: [
+                  Positioned(
+                    top: 24,
+                    left: 24,
+                    right: 4,
+                    child: Text(kOnboardingTitle, style: textHeader1),
+                  ),
                   FractionallySizedBox(
                     heightFactor: 1,
                     widthFactor: 1,
@@ -28,12 +34,6 @@ class OnboardingPage extends StatelessWidget {
                       fit: BoxFit.cover,
                       alignment: Alignment.topCenter,
                     ),
-                  ),
-                  Positioned(
-                    top: 24,
-                    left: 24,
-                    right: 4,
-                    child: Text(kOnboardingTitle, style: textHeader1),
                   ),
                 ],
               ),
