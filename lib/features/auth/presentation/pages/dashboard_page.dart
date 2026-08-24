@@ -5,7 +5,7 @@ import 'package:ecommerceapp/core/utils/color.dart';
 import 'package:ecommerceapp/core/utils/string.dart';
 import 'package:ecommerceapp/core/utils/style.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 
 @RoutePage()
 class DashboardPage extends StatelessWidget {
@@ -83,16 +83,13 @@ class _NavIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 4),
-      child: SvgPicture.asset(
-        asset,
-        width: 24,
-        height: 24,
-        colorFilter: ColorFilter.mode(
-          selected ? kPrimaryColor : kGrey400,
-          BlendMode.srcIn,
-        ),
+    return SvgPicture.asset(
+      asset,
+      width: 24,
+      height: 24,
+      colorFilter: ColorFilter.mode(
+        selected ? kPrimaryColor : kGrey400,
+        BlendMode.srcIn,
       ),
     );
   }
