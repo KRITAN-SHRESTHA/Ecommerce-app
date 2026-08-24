@@ -30,11 +30,16 @@ class _SigninPageState extends State<SigninPage> {
   late final TapGestureRecognizer _signUpRecognizer = TapGestureRecognizer()
     ..onTap = () => context.router.push(const SignupRoute());
 
+  late final TapGestureRecognizer _forgotPasswordRecognizer =
+      TapGestureRecognizer()
+        ..onTap = () => context.router.push(const ForgotPasswordRoute());
+
   @override
   void dispose() {
     _emailController.dispose();
     _passwordController.dispose();
     _signUpRecognizer.dispose();
+    _forgotPasswordRecognizer.dispose();
     super.dispose();
   }
 
@@ -92,11 +97,12 @@ class _SigninPageState extends State<SigninPage> {
               Text.rich(
                 TextSpan(
                   style: textBody3.copyWith(color: kGrey700),
-                  children: const [
-                    TextSpan(text: kForgotPasswordText),
+                  children: [
+                    const TextSpan(text: kForgotPasswordText),
                     TextSpan(
                       text: kResetPasswordText,
-                      style: TextStyle(
+                      recognizer: _forgotPasswordRecognizer,
+                      style: const TextStyle(
                         color: kPrimaryColor,
                         fontWeight: FontWeight.w600,
                         decoration: TextDecoration.underline,
