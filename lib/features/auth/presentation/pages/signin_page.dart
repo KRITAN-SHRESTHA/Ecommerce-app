@@ -12,40 +12,30 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
-class SignupPage extends StatefulWidget {
-  const SignupPage({super.key});
+class SigninPage extends StatefulWidget {
+  const SigninPage({super.key});
 
   @override
-  State<SignupPage> createState() => _SignupPageState();
+  State<SigninPage> createState() => _SigninPageState();
 }
 
-class _SignupPageState extends State<SignupPage> {
-  final _nameController = TextEditingController();
+class _SigninPageState extends State<SigninPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
   bool _obscurePassword = true;
-  bool _nameTouched = false;
   bool _emailTouched = false;
   bool _passwordTouched = false;
 
-  late final TapGestureRecognizer _loginRecognizer = TapGestureRecognizer()
-    ..onTap = () => context.router.push(const SigninRoute());
+  late final TapGestureRecognizer _signUpRecognizer = TapGestureRecognizer()
+    ..onTap = () => context.router.push(const SignupRoute());
 
   @override
   void dispose() {
-    _nameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
-    _loginRecognizer.dispose();
+    _signUpRecognizer.dispose();
     super.dispose();
-  }
-
-  AuthFieldStatus get _nameStatus {
-    if (!_nameTouched) return AuthFieldStatus.neutral;
-    return isValidFullName(_nameController.text)
-        ? AuthFieldStatus.success
-        : AuthFieldStatus.error;
   }
 
   AuthFieldStatus get _emailStatus {
@@ -63,7 +53,6 @@ class _SignupPageState extends State<SignupPage> {
   }
 
   bool get _isFormValid =>
-      _nameStatus == AuthFieldStatus.success &&
       _emailStatus == AuthFieldStatus.success &&
       _passwordStatus == AuthFieldStatus.success;
 
@@ -76,17 +65,8 @@ class _SignupPageState extends State<SignupPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(kSignupTitle, style: textHeader2).py(8),
-              Text(kSignupSubtitle, style: textBody1.copyWith(color: kGrey500)),
-              AuthTextField(
-                label: kFullNameLabel,
-                hint: kFullNameHint,
-                controller: _nameController,
-                status: _nameStatus,
-                errorText: kFullNameError,
-                onChanged: (_) => setState(() => _nameTouched = true),
-              ).py(24),
-
+              Text(kLoginTitle, style: textHeader2).py(8),
+              Text(kLoginSubtitle, style: textBody1.copyWith(color: kGrey500)),
               AuthTextField(
                 label: kEmailLabel,
                 hint: kEmailHint,
@@ -95,8 +75,7 @@ class _SignupPageState extends State<SignupPage> {
                 errorText: kEmailInvalidError,
                 keyboardType: TextInputType.emailAddress,
                 onChanged: (_) => setState(() => _emailTouched = true),
-              ),
-
+              ).py(24),
               AuthTextField(
                 label: kPasswordLabel,
                 hint: kPasswordHint,
@@ -108,34 +87,19 @@ class _SignupPageState extends State<SignupPage> {
                 onToggleObscure: () =>
                     setState(() => _obscurePassword = !_obscurePassword),
                 onChanged: (_) => setState(() => _passwordTouched = true),
-              ).py(24),
-
+              ),
+              const SizedBox(height: 12),
               Text.rich(
                 TextSpan(
-                  style: textBody3,
+                  style: textBody3.copyWith(color: kGrey700),
                   children: const [
-                    TextSpan(text: kSignupTermsIntro),
+                    TextSpan(text: kForgotPasswordText),
                     TextSpan(
-                      text: kTermsText,
+                      text: kResetPasswordText,
                       style: TextStyle(
-                        decoration: TextDecoration.underline,
+                        color: kPrimaryColor,
                         fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    TextSpan(text: kCommaSeparator),
-                    TextSpan(
-                      text: kPrivacyPolicyText,
-                      style: TextStyle(
                         decoration: TextDecoration.underline,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    TextSpan(text: kCommaAndText),
-                    TextSpan(
-                      text: kUsedCookieText,
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
-                        fontWeight: FontWeight.w600,
                       ),
                     ),
                   ],
@@ -145,7 +109,6 @@ class _SignupPageState extends State<SignupPage> {
               ElevatedButton(
                 onPressed: _isFormValid ? () {} : null,
                 style: ElevatedButton.styleFrom(
-                  textStyle: textBody2Medium,
                   backgroundColor: kPrimaryColor,
                   disabledBackgroundColor: kGrey300,
                   minimumSize: const Size(double.infinity, 56),
@@ -154,7 +117,7 @@ class _SignupPageState extends State<SignupPage> {
                   ),
                 ),
                 child: Text(
-                  kCreateAccountButtonText,
+                  kLoginButtonText,
                   style: textBody1SemiBold.copyWith(color: kWhiteColor),
                 ),
               ),
@@ -175,7 +138,7 @@ class _SignupPageState extends State<SignupPage> {
               const SizedBox(height: 24),
               SocialAuthButton(
                 iconAsset: kgoogleIcon,
-                label: kGoogleSignupText,
+                label: kLoginWithGoogleText,
                 backgroundColor: kWhiteColor,
                 textColor: kPrimaryColor,
                 borderColor: kGrey300,
@@ -184,7 +147,7 @@ class _SignupPageState extends State<SignupPage> {
               const SizedBox(height: 16),
               SocialAuthButton(
                 iconAsset: kfacebookIcon,
-                label: kFacebookSignupText,
+                label: kLoginWithFacebookText,
                 backgroundColor: kFacebookColor,
                 textColor: kWhiteColor,
                 onPressed: () {},
@@ -194,11 +157,11 @@ class _SignupPageState extends State<SignupPage> {
                   TextSpan(
                     style: textBody2.copyWith(color: kGrey700),
                     children: [
-                      TextSpan(text: kAlreadyHaveAccountText),
+                      const TextSpan(text: kDontHaveAccountText),
                       TextSpan(
-                        recognizer: _loginRecognizer,
-                        text: kLogInText,
-                        style: TextStyle(
+                        text: kJoinText,
+                        recognizer: _signUpRecognizer,
+                        style: const TextStyle(
                           color: kPrimaryColor,
                           fontWeight: FontWeight.w600,
                           decoration: TextDecoration.underline,
@@ -207,7 +170,7 @@ class _SignupPageState extends State<SignupPage> {
                     ],
                   ),
                 ),
-              ).py(48),
+              ).py(100),
             ],
           ),
         ),
