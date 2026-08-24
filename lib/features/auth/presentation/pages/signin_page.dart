@@ -113,7 +113,11 @@ class _SigninPageState extends State<SigninPage> {
               ),
               const SizedBox(height: 24),
               ElevatedButton(
-                onPressed: _isFormValid ? () {} : null,
+                onPressed: _isFormValid
+                    ? () {
+                        context.router.push(const DashboardRoute());
+                      }
+                    : null,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: kPrimaryColor,
                   disabledBackgroundColor: kGrey300,

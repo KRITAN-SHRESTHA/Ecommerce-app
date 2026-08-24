@@ -5,6 +5,12 @@ import 'package:ecommerceapp/features/auth/presentation/pages/reset_password_pag
 import 'package:ecommerceapp/features/auth/presentation/pages/signin_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/signup_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/verification_code_page.dart';
+import 'package:ecommerceapp/features/auth/presentation/pages/account_page.dart';
+import 'package:ecommerceapp/features/auth/presentation/pages/cart_page.dart';
+import 'package:ecommerceapp/features/auth/presentation/pages/dashboard_page.dart';
+import 'package:ecommerceapp/features/auth/presentation/pages/home_page.dart';
+import 'package:ecommerceapp/features/auth/presentation/pages/saved_page.dart';
+import 'package:ecommerceapp/features/auth/presentation/pages/search_page.dart';
 import 'package:flutter/widgets.dart';
 
 part 'routes.gr.dart';
@@ -13,22 +19,21 @@ part 'routes.gr.dart';
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-    // AutoRoute(
-    //   path: '/dashboard',
-    //   page: DashboardRoute.page,
-    //   // initial: true,
-    //   children: [
-    //     AutoRoute(path: 'home', page: HomeRoute.page, initial: true),
-    //     AutoRoute(path: 'offernews', page: OfferRoute.page),
-    //     AutoRoute(path: 'brand', page: BrandRoute.page),
-    //     AutoRoute(path: 'profile', page: ProfileRoute.page),
-    //   ],
-    // ),
     AutoRoute(initial: true, keepHistory: true, page: OnboardingRoute.page),
     AutoRoute(page: SignupRoute.page),
     AutoRoute(page: SigninRoute.page),
     AutoRoute(page: ForgotPasswordRoute.page),
     AutoRoute(page: VerificationCodeRoute.page),
     AutoRoute(page: ResetPasswordRoute.page),
+    AutoRoute(
+      page: DashboardRoute.page,
+      children: [
+        AutoRoute(page: HomeRoute.page, initial: true),
+        AutoRoute(page: SearchRoute.page),
+        AutoRoute(page: SavedRoute.page),
+        AutoRoute(page: CartRoute.page),
+        AutoRoute(page: AccountRoute.page),
+      ],
+    ),
   ];
 }

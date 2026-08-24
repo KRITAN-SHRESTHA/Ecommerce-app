@@ -56,3 +56,10 @@ const String kResetPasswordSubtitle =
 const String kPasswordChangedTitle = 'Password Changed!';
 const String kPasswordChangedSubtitle =
     'Your can now use your new password to login to your account.';
+
+// Dashboard bottom navigation
+const String kHomeLabel = 'Home';
+const String kSearchLabel = 'Search';
+const String kSavedLabel = 'Saved';
+const String kCartLabel = 'Cart';
+const String kAccountLabel = 'Account';
