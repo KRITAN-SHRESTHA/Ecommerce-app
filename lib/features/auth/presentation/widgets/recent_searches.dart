@@ -1,4 +1,5 @@
 import 'package:ecommerceapp/core/utils/color.dart';
+import 'package:ecommerceapp/core/utils/extension.dart';
 import 'package:ecommerceapp/core/utils/string.dart';
 import 'package:ecommerceapp/core/utils/style.dart';
 import 'package:flutter/material.dart';
@@ -34,25 +35,31 @@ class RecentSearches extends StatelessWidget {
               ),
             ),
           ],
-        ),
-        for (var i = 0; i < searches.length; i++) ...[
-          const SizedBox(height: 16),
-          Row(
+        ).py(20),
+        ...List.generate(searches.length, (index) {
+          return Column(
             children: [
-              Expanded(child: Text(searches[i], style: textBody1)),
-              InkWell(
-                onTap: () => onRemove(i),
-                child: const Icon(
-                  Icons.cancel_outlined,
-                  size: 22,
-                  color: kGrey400,
-                ),
+              Row(
+                mainAxisAlignment: .spaceBetween,
+                children: [
+                  Expanded(
+                    child: Text(searches[index], style: textBody1).py(10),
+                  ),
+                  GestureDetector(
+                    onTap: () => onRemove(index),
+                    child: const Icon(
+                      Icons.cancel_outlined,
+                      size: 22,
+                      color: kGrey400,
+                    ),
+                  ),
+                ],
               ),
+
+              const Divider(height: 1, color: kGrey200),
             ],
-          ),
-          const SizedBox(height: 16),
-          const Divider(height: 1, color: kGrey200),
-        ],
+          );
+        }),
       ],
     );
   }

@@ -23,9 +23,14 @@ class NoResultFounde extends StatelessWidget {
       mainAxisAlignment: .center,
       children: [
         SvgPicture.asset(image, height: 40, width: 40).py(10),
-        Text(noReslutFounText, style: textBody1).py(10),
         Text(
-          softWrap: true,
+          textAlign: .center,
+          maxLines: 1,
+          noReslutFounText,
+          style: textBody1SemiBold,
+        ).py(10),
+        Text(
+          maxLines: 1,
           textAlign: .center,
           noResultFoundDescription,
           style: textBody1.copyWith(color: kGrey300),
