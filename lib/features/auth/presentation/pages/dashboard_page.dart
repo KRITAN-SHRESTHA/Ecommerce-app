@@ -17,7 +17,7 @@ class DashboardPage extends StatelessWidget {
       routes: const [
         HomeRoute(),
         SearchRoute(),
-        SavedRoute(),
+        FavouriteRoute(),
         CartRoute(),
         AccountRoute(),
       ],

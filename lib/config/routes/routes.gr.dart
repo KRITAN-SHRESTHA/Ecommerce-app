@@ -59,6 +59,22 @@ class DashboardRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [FavouritePage]
+class FavouriteRoute extends PageRouteInfo<void> {
+  const FavouriteRoute({List<PageRouteInfo>? children})
+    : super(FavouriteRoute.name, initialChildren: children);
+
+  static const String name = 'FavouriteRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const FavouritePage();
+    },
+  );
+}
+
+/// generated route for
 /// [ForgotPasswordPage]
 class ForgotPasswordRoute extends PageRouteInfo<void> {
   const ForgotPasswordRoute({List<PageRouteInfo>? children})
@@ -134,22 +150,6 @@ class ResetPasswordRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const ResetPasswordPage();
-    },
-  );
-}
-
-/// generated route for
-/// [SavedPage]
-class SavedRoute extends PageRouteInfo<void> {
-  const SavedRoute({List<PageRouteInfo>? children})
-    : super(SavedRoute.name, initialChildren: children);
-
-  static const String name = 'SavedRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const SavedPage();
     },
   );
 }

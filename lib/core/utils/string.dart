@@ -77,3 +77,6 @@ const String kNoResultFoundDescription =
 
 // notification page
 const String kNotificationText = 'Notificaitons';
+
+// favourite page
+const String kSavedItemsTitle = 'Saved Items';
