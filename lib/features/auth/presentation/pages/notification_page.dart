@@ -21,7 +21,7 @@ class _NotificaitonPageState extends State<NotificaitonPage> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: .all(24),
+          padding: const EdgeInsets.fromLTRB(24, 0, 24, 16),
           child: Column(
             crossAxisAlignment: .start,
             children: [
@@ -36,7 +36,7 @@ class _NotificaitonPageState extends State<NotificaitonPage> {
                   SvgPicture.asset(kNotificaitonIcon),
                 ],
               ),
-              const Divider(color: kGrey200, thickness: 0.5).py(20),
+              const Divider(color: kGrey200, thickness: 0.5).pOnly(top: 5),
               Expanded(
                 child: ListView.builder(
                   itemCount: 1,

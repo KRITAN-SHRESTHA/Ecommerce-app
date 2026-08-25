@@ -66,11 +66,11 @@ class _SigninPageState extends State<SigninPage> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(24),
+          padding: const EdgeInsets.fromLTRB(24, 0, 24, 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(kLoginTitle, style: textHeader2).py(8),
+              Text(kLoginTitle, style: textHeader3).py(8),
               Text(kLoginSubtitle, style: textBody1.copyWith(color: kGrey500)),
               AuthTextField(
                 label: kEmailLabel,
