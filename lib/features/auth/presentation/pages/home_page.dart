@@ -155,6 +155,7 @@ class _HomePageState extends State<HomePage> {
                   final product = _products[index];
                   return ProductCard(
                     onFavoriteTap: () {},
+
                     isFavorite: false,
                     name: product.name,
                     price: product.price,

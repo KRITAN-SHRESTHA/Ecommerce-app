@@ -29,3 +29,7 @@ const String kUserDuontoneIcon = 'assets/svg/user_duotone_icon.svg';
 // favourite page
 const String kHeartIcon = 'assets/svg/heart_icon.svg';
 const String kbellIcon = 'assets/svg/bell_icon.svg';
+
+// details page
+const String kStarIcon = 'assets/svg/star.svg';
+const String kBagIcon = 'assets/svg/bag_icon.svg';

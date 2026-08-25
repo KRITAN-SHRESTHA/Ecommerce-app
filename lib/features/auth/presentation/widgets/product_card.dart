@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:ecommerceapp/config/routes/routes.dart';
 import 'package:ecommerceapp/core/utils/assets.dart';
 import 'package:ecommerceapp/core/utils/color.dart';
 import 'package:ecommerceapp/core/utils/style.dart';
@@ -29,17 +31,21 @@ class ProductCard extends StatelessWidget {
       children: [
         AspectRatio(
           aspectRatio: 0.85,
+
           child: Stack(
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16),
-                child: Container(
-                  width: double.infinity,
-                  height: double.infinity,
-                  color: kGrey200,
-                  child: imagePath != null
-                      ? Image.asset(imagePath!, fit: BoxFit.cover)
-                      : null,
+              GestureDetector(
+                onTap: () => context.router.push(ProductDetailRoute()),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Container(
+                    width: double.infinity,
+                    height: double.infinity,
+                    color: kGrey200,
+                    child: imagePath != null
+                        ? Image.asset(imagePath!, fit: BoxFit.cover)
+                        : null,
+                  ),
                 ),
               ),
               Positioned(
