@@ -156,6 +156,14 @@ class _NotificaitonPageState extends State<NotificaitonPage> {
                             ).py(20),
                           ],
                         ),
+                        //* uncomment this code while implementing the api
+                        // NoResultFounde(
+                        //   image: kbellIcon,
+                        //   noReslutFounText:
+                        //       "You haven't gotten any notifications yet!",
+                        //   noResultFoundDescription:
+                        //       "We'll you when something cool happens.",
+                        // ),
                       ],
                     );
                   },
