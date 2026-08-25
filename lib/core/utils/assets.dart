@@ -25,3 +25,6 @@ const String kDiscountIcon = 'assets/svg/discount_icon.svg';
 const String kLocationIcon = 'assets/svg/location_icon.svg';
 const String kWalletIcon = 'assets/svg/wallet_icon.svg';
 const String kUserDuontoneIcon = 'assets/svg/user_duotone_icon.svg';
+
+// favourite page
+const String kHeartIcon = 'assets/svg/heart_icon.svg';
