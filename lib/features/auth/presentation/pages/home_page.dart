@@ -52,12 +52,37 @@ class _HomePageState extends State<HomePage> {
       price: '1,190',
       imagePath: kSampleProductImage,
     ),
-    _Product(name: 'Regular Fit Polo', price: '1,100', discountPercent: 52),
-    _Product(name: 'Regular Fit Black', price: '1,690'),
-    _Product(name: 'Regular Fit V-Neck', price: '1,290'),
-    _Product(name: 'Regular Fit V-Neck', price: '1,290'),
-    _Product(name: 'Regular Fit V-Neck', price: '1,290'),
-    _Product(name: 'Regular Fit V-Neck', price: '1,290'),
+    _Product(
+      name: 'Regular Fit Polo',
+      price: '1,100',
+      discountPercent: 52,
+      imagePath: kSampleProductImage,
+    ),
+    _Product(
+      name: 'Regular Fit Black',
+      price: '1,690',
+      imagePath: kSampleProductImage,
+    ),
+    _Product(
+      name: 'Regular Fit V-Neck',
+      price: '1,290',
+      imagePath: kSampleProductImage,
+    ),
+    _Product(
+      name: 'Regular Fit V-Neck',
+      price: '1,290',
+      imagePath: kSampleProductImage,
+    ),
+    _Product(
+      name: 'Regular Fit V-Neck',
+      price: '1,290',
+      imagePath: kSampleProductImage,
+    ),
+    _Product(
+      name: 'Regular Fit V-Neck',
+      price: '1,290',
+      imagePath: kSampleProductImage,
+    ),
   ];
 
   @override

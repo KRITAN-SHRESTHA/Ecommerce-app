@@ -17,3 +17,4 @@ const String kMicIcon = 'assets/svg/mic_icon.svg';
 const String kNotificaitonIcon = 'assets/svg/notification_icon.svg';
 const String kFilterIcon = 'assets/svg/filter_icon.svg';
 const String kFavouriteIcon = 'assets/svg/favourite_icon.svg';
+const String kArrowIcon = 'assets/svg/arrow_icon.svg';
