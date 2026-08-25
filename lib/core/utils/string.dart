@@ -71,3 +71,6 @@ const String kDiscover = 'Discover';
 const String kSearchForClothesHint = 'Search for clothes...';
 const String kRecentSearchesTitle = 'Recent Searches';
 const String kClearAllText = 'Clear all';
+const String kNoResultFoundText = 'No Results Found!';
+const String kNoResultFoundDescription =
+    'Try a similar word or something more general.';
