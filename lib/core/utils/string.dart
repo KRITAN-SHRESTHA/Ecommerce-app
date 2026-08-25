@@ -74,3 +74,6 @@ const String kClearAllText = 'Clear all';
 const String kNoResultFoundText = 'No Results Found!';
 const String kNoResultFoundDescription =
     'Try a similar word or something more general.';
+
+// notification page
+const String kNotificationText = 'Notificaitons';

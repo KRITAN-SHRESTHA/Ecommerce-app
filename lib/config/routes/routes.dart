@@ -4,6 +4,7 @@ import 'package:ecommerceapp/features/auth/presentation/pages/cart_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/dashboard_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/forgot_password_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/home_page.dart';
+import 'package:ecommerceapp/features/auth/presentation/pages/notification_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/onboarding_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/reset_password_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/saved_page.dart';
@@ -25,6 +26,7 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: ForgotPasswordRoute.page),
     AutoRoute(page: VerificationCodeRoute.page),
     AutoRoute(page: ResetPasswordRoute.page),
+    AutoRoute(page: NotificaitonRoute.page),
     AutoRoute(
       page: DashboardRoute.page,
       initial: true,
