@@ -46,7 +46,7 @@ class _FavouritePageState extends State<FavouritePage> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const .all(24),
+          padding: const EdgeInsets.fromLTRB(24, 0, 24, 16),
           child: Column(
             children: [
               Row(

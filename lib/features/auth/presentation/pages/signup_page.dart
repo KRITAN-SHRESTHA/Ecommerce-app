@@ -72,11 +72,11 @@ class _SignupPageState extends State<SignupPage> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(24),
+          padding: const EdgeInsets.fromLTRB(24, 0, 24, 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(kSignupTitle, style: textHeader2).py(8),
+              Text(kSignupTitle, style: textHeader3).py(8),
               Text(kSignupSubtitle, style: textBody1.copyWith(color: kGrey500)),
               AuthTextField(
                 label: kFullNameLabel,

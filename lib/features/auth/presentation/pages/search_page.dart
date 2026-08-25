@@ -41,7 +41,7 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(24),
+          padding: const EdgeInsets.fromLTRB(24, 0, 24, 16),
           child: Column(
             children: [
               Row(

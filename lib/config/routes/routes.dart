@@ -9,6 +9,7 @@ import 'package:ecommerceapp/features/auth/presentation/pages/notification_page.
 import 'package:ecommerceapp/features/auth/presentation/pages/onboarding_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/product_detail_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/reset_password_page.dart';
+import 'package:ecommerceapp/features/auth/presentation/pages/review_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/search_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/signin_page.dart';
 import 'package:ecommerceapp/features/auth/presentation/pages/signup_page.dart';
@@ -21,7 +22,7 @@ part 'routes.gr.dart';
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-    AutoRoute(initial: false, keepHistory: true, page: OnboardingRoute.page),
+    AutoRoute(initial: true, keepHistory: false, page: OnboardingRoute.page),
     AutoRoute(page: SignupRoute.page),
     AutoRoute(page: SigninRoute.page),
     AutoRoute(page: ForgotPasswordRoute.page),
@@ -29,10 +30,11 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: ResetPasswordRoute.page),
     AutoRoute(page: NotificaitonRoute.page),
     AutoRoute(page: ProductDetailRoute.page),
+    AutoRoute(page: ReviewRoute.page),
 
     AutoRoute(
       page: DashboardRoute.page,
-      initial: true,
+      initial: false,
       children: [
         AutoRoute(page: HomeRoute.page, initial: true),
         AutoRoute(page: SearchRoute.page),

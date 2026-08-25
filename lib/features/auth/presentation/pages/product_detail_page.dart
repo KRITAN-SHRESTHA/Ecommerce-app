@@ -114,29 +114,25 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                     ).py(8),
                     Row(
                       children: [
-                        GestureDetector(
-                          onTap: () {},
-                          child: SvgPicture.asset(
-                            kStarIcon,
-                            width: 18,
-                            height: 18,
-                          ),
-                        ),
+                        SvgPicture.asset(kStarIcon, width: 18, height: 18),
                         const SizedBox(width: 6),
-                        RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                text: '4.0/5',
-                                style: textBody2SemiBold.copyWith(
-                                  decoration: TextDecoration.underline,
+                        GestureDetector(
+                          onTap: () => context.router.push(ReviewRoute()),
+                          child: RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: '4.0/5',
+                                  style: textBody2SemiBold.copyWith(
+                                    decoration: TextDecoration.underline,
+                                  ),
                                 ),
-                              ),
-                              TextSpan(
-                                text: ' (45 reviews)',
-                                style: textBody2.copyWith(color: kGrey600),
-                              ),
-                            ],
+                                TextSpan(
+                                  text: ' (45 reviews)',
+                                  style: textBody2.copyWith(color: kGrey600),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],

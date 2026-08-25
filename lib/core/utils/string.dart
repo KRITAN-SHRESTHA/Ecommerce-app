@@ -86,3 +86,10 @@ const String kDetailsTitle = 'Details';
 const String kChooseSizeLabel = 'Choose size';
 const String kPriceLabel = 'Price';
 const String kAddToCartText = 'Add to Cart';
+
+// review page
+const String kReviewsTitle = 'Reviews';
+const String kMostRelevantText = 'Most Relevant';
+const String kNewestText = 'Newest';
+const String kHighestRatingText = 'Highest Rating';
+const String kLowestRatingText = 'Lowest Rating';

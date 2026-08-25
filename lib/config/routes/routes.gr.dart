@@ -171,6 +171,22 @@ class ResetPasswordRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [ReviewPage]
+class ReviewRoute extends PageRouteInfo<void> {
+  const ReviewRoute({List<PageRouteInfo>? children})
+    : super(ReviewRoute.name, initialChildren: children);
+
+  static const String name = 'ReviewRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const ReviewPage();
+    },
+  );
+}
+
+/// generated route for
 /// [SearchPage]
 class SearchRoute extends PageRouteInfo<void> {
   const SearchRoute({List<PageRouteInfo>? children})
