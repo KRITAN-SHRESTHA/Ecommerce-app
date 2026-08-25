@@ -101,7 +101,10 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(kDiscover, style: textHeader2),
-                SvgPicture.asset(kNotificaitonIcon).pOnly(bottom: 16),
+                GestureDetector(
+                  onTap: () => context.router.push(NotificaitonRoute()),
+                  child: SvgPicture.asset(kNotificaitonIcon).pOnly(bottom: 16),
+                ),
               ],
             ),
             SizedBox(

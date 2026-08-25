@@ -91,6 +91,22 @@ class HomeRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [NotificaitonPage]
+class NotificaitonRoute extends PageRouteInfo<void> {
+  const NotificaitonRoute({List<PageRouteInfo>? children})
+    : super(NotificaitonRoute.name, initialChildren: children);
+
+  static const String name = 'NotificaitonRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const NotificaitonPage();
+    },
+  );
+}
+
+/// generated route for
 /// [OnboardingPage]
 class OnboardingRoute extends PageRouteInfo<void> {
   const OnboardingRoute({List<PageRouteInfo>? children})

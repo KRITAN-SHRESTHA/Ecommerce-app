@@ -18,3 +18,10 @@ const String kNotificaitonIcon = 'assets/svg/notification_icon.svg';
 const String kFilterIcon = 'assets/svg/filter_icon.svg';
 const String kFavouriteIcon = 'assets/svg/favourite_icon.svg';
 const String kArrowIcon = 'assets/svg/arrow_icon.svg';
+
+// notificaiton page icon
+const String kCardIcon = 'assets/svg/card_icon.svg';
+const String kDiscountIcon = 'assets/svg/discount_icon.svg';
+const String kLocationIcon = 'assets/svg/location_icon.svg';
+const String kWalletIcon = 'assets/svg/wallet_icon.svg';
+const String kUserDuontoneIcon = 'assets/svg/user_duotone_icon.svg';

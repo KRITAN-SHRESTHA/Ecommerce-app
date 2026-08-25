@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:ecommerceapp/config/routes/routes.dart';
 import 'package:ecommerceapp/core/utils/assets.dart';
 import 'package:ecommerceapp/core/utils/extension.dart';
 import 'package:ecommerceapp/core/utils/string.dart';
@@ -50,7 +51,14 @@ class _SearchPageState extends State<SearchPage> {
                       child: Text(kSearchLabel, style: textHeader4),
                     ),
                   ),
-                  SvgPicture.asset(kNotificaitonIcon, width: 24, height: 24),
+                  GestureDetector(
+                    onTap: () => context.router.push(NotificaitonRoute()),
+                    child: SvgPicture.asset(
+                      kNotificaitonIcon,
+                      width: 24,
+                      height: 24,
+                    ),
+                  ),
                 ],
               ),
               SizedBox(
