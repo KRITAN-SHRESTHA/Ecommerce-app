@@ -139,6 +139,22 @@ class OnboardingRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [ProductDetailPage]
+class ProductDetailRoute extends PageRouteInfo<void> {
+  const ProductDetailRoute({List<PageRouteInfo>? children})
+    : super(ProductDetailRoute.name, initialChildren: children);
+
+  static const String name = 'ProductDetailRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const ProductDetailPage();
+    },
+  );
+}
+
+/// generated route for
 /// [ResetPasswordPage]
 class ResetPasswordRoute extends PageRouteInfo<void> {
   const ResetPasswordRoute({List<PageRouteInfo>? children})

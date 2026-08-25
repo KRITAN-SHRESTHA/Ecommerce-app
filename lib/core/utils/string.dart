@@ -80,3 +80,9 @@ const String kNotificationText = 'Notificaitons';
 
 // favourite page
 const String kSavedItemsTitle = 'Saved Items';
+
+// product detail page
+const String kDetailsTitle = 'Details';
+const String kChooseSizeLabel = 'Choose size';
+const String kPriceLabel = 'Price';
+const String kAddToCartText = 'Add to Cart';
