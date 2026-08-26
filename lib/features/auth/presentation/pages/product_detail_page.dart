@@ -5,6 +5,7 @@ import 'package:ecommerceapp/core/utils/color.dart';
 import 'package:ecommerceapp/core/utils/extension.dart';
 import 'package:ecommerceapp/core/utils/string.dart';
 import 'package:ecommerceapp/core/utils/style.dart';
+import 'package:ecommerceapp/features/auth/presentation/widgets/button_build.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -192,32 +193,10 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                   ),
                   const SizedBox(width: 20),
                   Expanded(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: kPrimaryColor,
-                        minimumSize: const Size(double.infinity, 54),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.asset(
-                            kBagIcon,
-                            height: 24,
-                            width: 24,
-                          ).px(8),
-
-                          Text(
-                            kAddToCartText,
-                            style: textBody1SemiBold.copyWith(
-                              color: kWhiteColor,
-                            ),
-                          ),
-                        ],
-                      ),
+                    child: BuildButton(
+                      image: kBagIcon,
+                      onTap: () {},
+                      kAddToCartText: "Add to Cart",
                     ),
                   ),
                 ],
