@@ -25,11 +25,13 @@ class CategoryChip extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           border: selected ? null : Border.all(color: kGrey200),
         ),
-        child: Text(
-          label,
-          style: selected
-              ? textBody1SemiBold.copyWith(color: kWhiteColor)
-              : textBody1,
+        child: Center(
+          child: Text(
+            label,
+            style: selected
+                ? textBody1SemiBold.copyWith(color: kWhiteColor)
+                : textBody1,
+          ),
         ),
       ),
     );

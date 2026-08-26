@@ -1,10 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:ecommerceapp/config/routes/routes.dart';
 import 'package:ecommerceapp/core/utils/assets.dart';
+import 'package:ecommerceapp/core/utils/color.dart';
 import 'package:ecommerceapp/core/utils/extension.dart';
 import 'package:ecommerceapp/core/utils/string.dart';
 import 'package:ecommerceapp/core/utils/style.dart';
 import 'package:ecommerceapp/features/auth/presentation/widgets/category_chip.dart';
+import 'package:ecommerceapp/features/auth/presentation/widgets/filter_bottom_sheet.dart';
 import 'package:ecommerceapp/features/auth/presentation/widgets/filter_button.dart';
 import 'package:ecommerceapp/features/auth/presentation/widgets/product_card.dart';
 import 'package:ecommerceapp/features/auth/presentation/widgets/search_text_field.dart';
@@ -124,7 +126,19 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   const SizedBox(width: 12),
-                  FilterButton(onTap: () {}),
+                  FilterButton(
+                    onTap: () => showModalBottomSheet<void>(
+                      context: context,
+                      isScrollControlled: true,
+                      backgroundColor: kWhiteColor,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.vertical(
+                          top: Radius.circular(24),
+                        ),
+                      ),
+                      builder: (context) => const FilterBottomSheet(),
+                    ),
+                  ),
                 ],
               ),
             ).py(20),

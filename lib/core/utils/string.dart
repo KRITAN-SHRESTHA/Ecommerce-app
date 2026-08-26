@@ -93,3 +93,12 @@ const String kMostRelevantText = 'Most Relevant';
 const String kNewestText = 'Newest';
 const String kHighestRatingText = 'Highest Rating';
 const String kLowestRatingText = 'Lowest Rating';
+
+// filter bottom sheet
+const String kFiltersTitle = 'Filters';
+const String kSortByLabel = 'Sort By';
+const String kRelevanceText = 'Relevance';
+const String kPriceLowToHighText = 'Price: Low - High';
+const String kPriceHighToLowText = 'Price: High - Low';
+const String kSizeLabel = 'Size';
+const String kApplyFiltersText = 'Apply Filters';

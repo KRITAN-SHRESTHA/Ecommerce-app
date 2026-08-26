@@ -1,17 +1,18 @@
+import 'package:ecommerceapp/core/utils/color.dart';
 import 'package:flutter/material.dart';
 
 Widget buildButton({
   required String text,
-  required VoidCallback onPressed,
+  required VoidCallback? onPressed,
   Color? color,
   Color? textColor,
 }) {
   return ElevatedButton(
     onPressed: onPressed,
     style: ElevatedButton.styleFrom(
-      backgroundColor: color ?? Colors.blue,
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      backgroundColor: kPrimaryColor,
+      minimumSize: const Size(double.infinity, 56),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     ),
     child: Text(
       text,
