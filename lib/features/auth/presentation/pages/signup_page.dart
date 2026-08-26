@@ -207,7 +207,7 @@ class _SignupPageState extends State<SignupPage> {
                     ],
                   ),
                 ),
-              ).py(48),
+              ).py(25),
             ],
           ),
         ),
