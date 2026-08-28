@@ -143,7 +143,11 @@ class _SignupPageState extends State<SignupPage> {
               ),
               const SizedBox(height: 24),
               ElevatedButton(
-                onPressed: _isFormValid ? () {} : null,
+                onPressed: _isFormValid
+                    ? () {
+                        context.router.push(SigninRoute());
+                      }
+                    : null,
                 style: ElevatedButton.styleFrom(
                   textStyle: textBody2Medium,
                   backgroundColor: kPrimaryColor,

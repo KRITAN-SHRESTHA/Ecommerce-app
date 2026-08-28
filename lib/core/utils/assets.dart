@@ -33,3 +33,12 @@ const String kbellIcon = 'assets/svg/bell_icon.svg';
 // details page
 const String kStarIcon = 'assets/svg/star.svg';
 const String kBagIcon = 'assets/svg/bag_icon.svg';
+
+//account page
+const String kOrderIcon = 'assets/svg/box_icon.svg';
+const String kAddressIcon = 'assets/svg/address_icon.svg';
+const String kDetailIcon = 'assets/svg/details_icon.svg';
+const String kHeadPhoneIcon = 'assets/svg/headphones_icon.svg';
+const String kLogOutIcon = 'assets/svg/logout_icon.svg';
+const String kQuestionIcon = 'assets/svg/question_icon.svg';
+const String kArrowRightIcon = 'assets/svg/arrow.svg';
