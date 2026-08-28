@@ -121,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                         controller: _searchController,
                         hint: kSearchForClothesHint,
                         readOnly: true,
-                        onTap: () => context.router.push(const SearchRoute()),
+                        onTap: () => context.tabsRouter.setActiveIndex(1),
                       ),
                     ),
                   ),

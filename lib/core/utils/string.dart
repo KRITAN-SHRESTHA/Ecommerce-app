@@ -102,3 +102,14 @@ const String kPriceLowToHighText = 'Price: Low - High';
 const String kPriceHighToLowText = 'Price: High - Low';
 const String kSizeLabel = 'Size';
 const String kApplyFiltersText = 'Apply Filters';
+
+// Account page
+const String kAccountText = 'Account';
+const String kMyOrderText = 'My Orders';
+const String kAddressBookText = 'Address Book';
+const String kMyDetailsText = 'My Details';
+const String kPaymentMethodsText = 'Payment Methods';
+const String kNotificaitonsText = 'Notification';
+const String kFAQsText = 'FAQs';
+const String kHelpCenterText = 'Help Center';
+const String kLogOutText = "Logout";

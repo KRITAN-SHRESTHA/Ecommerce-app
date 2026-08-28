@@ -22,9 +22,9 @@ part 'routes.gr.dart';
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-    AutoRoute(initial: true, keepHistory: false, page: OnboardingRoute.page),
-    AutoRoute(page: SignupRoute.page),
-    AutoRoute(page: SigninRoute.page),
+    AutoRoute(initial: false, keepHistory: false, page: OnboardingRoute.page),
+    AutoRoute(page: SignupRoute.page, keepHistory: false),
+    AutoRoute(page: SigninRoute.page, keepHistory: false),
     AutoRoute(page: ForgotPasswordRoute.page),
     AutoRoute(page: VerificationCodeRoute.page),
     AutoRoute(page: ResetPasswordRoute.page),
@@ -34,7 +34,8 @@ class AppRouter extends RootStackRouter {
 
     AutoRoute(
       page: DashboardRoute.page,
-      initial: false,
+      initial: true,
+      keepHistory: true,
       children: [
         AutoRoute(page: HomeRoute.page, initial: true),
         AutoRoute(page: SearchRoute.page),

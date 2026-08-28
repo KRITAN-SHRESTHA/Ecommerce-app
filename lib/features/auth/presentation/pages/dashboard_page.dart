@@ -30,43 +30,45 @@ class DashboardPage extends StatelessWidget {
               color: kWhiteColor,
               border: Border(top: BorderSide(color: kGrey200)),
             ),
-            child: BottomNavigationBar(
-              backgroundColor: kWhiteColor,
-              elevation: 0,
-              type: BottomNavigationBarType.fixed,
-              currentIndex: tabsRouter.activeIndex,
-              selectedItemColor: kPrimaryColor,
-              unselectedItemColor: kGrey400,
-              selectedLabelStyle: textBody3SemiBold,
-              unselectedLabelStyle: textBody3,
-              onTap: tabsRouter.setActiveIndex,
-              items: [
-                BottomNavigationBarItem(
-                  label: kHomeLabel,
-                  icon: _NavIcon(asset: kHomeIcon, selected: false),
-                  activeIcon: _NavIcon(asset: kHomeIcon, selected: true),
+            child: SafeArea(
+              top: false,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5),
+                child: Row(
+                  children: [
+                    _NavItem(
+                      asset: kHomeIcon,
+                      label: kHomeLabel,
+                      selected: tabsRouter.activeIndex == 0,
+                      onTap: () => tabsRouter.setActiveIndex(0),
+                    ),
+                    _NavItem(
+                      asset: kSearchIcon,
+                      label: kSearchLabel,
+                      selected: tabsRouter.activeIndex == 1,
+                      onTap: () => tabsRouter.setActiveIndex(1),
+                    ),
+                    _NavItem(
+                      asset: kSaveIcon,
+                      label: kSavedLabel,
+                      selected: tabsRouter.activeIndex == 2,
+                      onTap: () => tabsRouter.setActiveIndex(2),
+                    ),
+                    _NavItem(
+                      asset: kCartIcon,
+                      label: kCartLabel,
+                      selected: tabsRouter.activeIndex == 3,
+                      onTap: () => tabsRouter.setActiveIndex(3),
+                    ),
+                    _NavItem(
+                      asset: kUserIcon,
+                      label: kAccountLabel,
+                      selected: tabsRouter.activeIndex == 4,
+                      onTap: () => tabsRouter.setActiveIndex(4),
+                    ),
+                  ],
                 ),
-                BottomNavigationBarItem(
-                  label: kSearchLabel,
-                  icon: _NavIcon(asset: kSearchIcon, selected: false),
-                  activeIcon: _NavIcon(asset: kSearchIcon, selected: true),
-                ),
-                BottomNavigationBarItem(
-                  label: kSavedLabel,
-                  icon: _NavIcon(asset: kSaveIcon, selected: false),
-                  activeIcon: _NavIcon(asset: kSaveIcon, selected: true),
-                ),
-                BottomNavigationBarItem(
-                  label: kCartLabel,
-                  icon: _NavIcon(asset: kCartIcon, selected: false),
-                  activeIcon: _NavIcon(asset: kCartIcon, selected: true),
-                ),
-                BottomNavigationBarItem(
-                  label: kAccountLabel,
-                  icon: _NavIcon(asset: kUserIcon, selected: false),
-                  activeIcon: _NavIcon(asset: kUserIcon, selected: true),
-                ),
-              ],
+              ),
             ),
           ),
         );
@@ -75,21 +77,53 @@ class DashboardPage extends StatelessWidget {
   }
 }
 
-class _NavIcon extends StatelessWidget {
-  const _NavIcon({required this.asset, required this.selected});
+class _NavItem extends StatelessWidget {
+  const _NavItem({
+    required this.asset,
+    required this.label,
+    required this.selected,
+    required this.onTap,
+  });
 
   final String asset;
+  final String label;
   final bool selected;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(
-      asset,
-      width: 24,
-      height: 24,
-      colorFilter: ColorFilter.mode(
-        selected ? kPrimaryColor : kGrey400,
-        BlendMode.srcIn,
+    final color = selected ? kPrimaryColor : kGrey400;
+    return Expanded(
+      child: GestureDetector(
+        onTap: onTap,
+        behavior: HitTestBehavior.opaque,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 14),
+              decoration: BoxDecoration(
+                color: selected ? kGrey200 : Colors.transparent,
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: SvgPicture.asset(
+                asset,
+                width: 22,
+                height: 22,
+                colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: (selected ? textBody3SemiBold : textBody3).copyWith(
+                color: color,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -18,3 +18,7 @@ const Color kErrorColor = Color(0xFFED1010);
 
 // Brand colors
 const Color kFacebookColor = Color(0xFF1877F2);
+
+// Bottom nav active state
+const Color kNavActiveColor = Color(0xFF6C5CE7);
+const Color kNavHighlightColor = Color(0xFFEEEBFB);
